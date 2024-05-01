@@ -1,0 +1,16 @@
+{
+  "name": "vite-svelte-ssg-template",
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --outDir build/app",
+    "generate": "npm run build && vite build --ssr src/ssg-entry.js --outDir build/ssg && node prerender.js",
+    "preview": "vite preview --outDir build/static"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.2",
+    "svelte": "^4.2.12",
+    "vite": "^5.2.0"
+  }
+}
