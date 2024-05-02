@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --outDir build/app",
-    "generate": "npm run build && vite build --ssr src/ssg-entry.js --outDir build/ssg && node prerender.js",
+    "build": "vite build",
+    "generate": "node prerender.js",
     "preview": "vite preview --outDir build/static"
   },
   "devDependencies": {
